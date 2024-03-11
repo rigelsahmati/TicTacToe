@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Comfortaa:wght@500&family=Concert+One&family=Courgette&family=Martian+Mono&family=Prata&family=Space+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    border-color: black;
+}
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 20%, #9599E2 80%);
+    
+}
+.box{
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: fit-content;
+    height:  fit-content;
+    margin-top: 2vw;
+}
+button{
+    width: 10vw;
+    height: 10vw;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vw;
+    transition: all .2s;
+}
+button:nth-child(1){
+    border-radius: 15px 0 0 0;
+}
+button:nth-child(3){
+    border-radius:  0 15px 0 0;
+}
+button:nth-child(7){    
+    
+ border-radius:  0  0  0 15px; 
+}
+button:nth-child(9){
+    border-radius:  0  0 15px 0 ;
+}
+button:disabled{
+     /* background-color: #dedddd;  */
+     background-color: white;
+     color: black;
+}
+.restart{
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: 10px !important;
+    font-size: 3vw;
+    padding: 1vw 2vw;
+    color: white;
+    background-color: #ff5bb9;
+    background-image: linear-gradient(270deg, #ff3cac00 0%, #a068d36b 50%, #2b86c55c 100%);
+    margin-top: 2vw;
+    transition: all .2s;
+}
+.restart:active{
+transform: scale(0.9);
+}
+.btn4, .btn5,.btn6,.btn7,.btn8,.btn9{
+    border-top: 1px solid;
+}
+.btn1, .btn4,.btn7,.btn2,.btn5,.btn8{
+    border-right: 1px solid;
+}
+.score{
+    position: absolute;
+    top: 3vw;
+    display: flex;
+    align-items: baseline;
+    color: white;
+}
+.pl1{
+    left: 2vw;
+}
+.pl2{
+    text-align: right;
+    right: 2vw;
+}
+.playerName{
+    letter-spacing: 10px;
+}
+
+@media screen and (max-width: 549px) {
+    /*body{
+        justify-content: flex-end;
+    }*/
+    button{
+        width: 30vw;
+        height: 30vw;
+        font-size: 8vw;
+    }
+   .box{
+        margin-top: 20vw;
+    }
+    .restart{
+        margin-top: 20vw;
+        /*width: 30vw;
+        height: 10vw;*/
+        font-size: 7vw;
+        margin-bottom: 10vw;
+        padding: 4vw 6vw !important;
+    
+    }
+    .score{
+        top: 10vw;
+    }
+    .pl2{
+        right: 5vw;
+    }
+}
